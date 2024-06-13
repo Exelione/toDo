@@ -1,0 +1,21 @@
+.addTodo {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  border: 2px solid var(--text-c);
+  border-radius: 38px;
+  padding: 5%;
+  background-color: var(--bg-a);
+}
+.addTodo input {
+  width: 90%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-c);
+  text-transform: capitalize;
+  font-size: 22px;
+}

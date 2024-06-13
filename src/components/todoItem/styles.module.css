@@ -1,0 +1,134 @@
+.todo {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 38px;
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  word-break: break-all;
+  background-color: var(--bg-a);
+}
+.todo .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  gap: 18px;
+}
+.todo .checkbox span {
+  display: inline-block;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  vertical-align: middle;
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  vertical-align: middle;
+  border: 1px solid #C99E71;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.todo .checkbox span::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  display: block;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  opacity: 1;
+  border-radius: 50%;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+.todo .checkbox span svg {
+  position: absolute;
+  z-index: 1;
+  top: 14px;
+  left: 12px;
+  fill: none;
+  stroke: var(--text-c);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.todo .checkbox input {
+  display: none;
+}
+.todo .checkbox input:checked + span {
+  border-color: var(--bg-b);
+  background: var(--bg-b);
+  -webkit-animation: check-15 0.6s ease;
+          animation: check-15 0.6s ease;
+}
+.todo .checkbox input:checked + span svg {
+  stroke-dashoffset: 0;
+}
+.todo .checkbox input:checked + span + p:before {
+  -webkit-transform: scale(2.2);
+      -ms-transform: scale(2.2);
+          transform: scale(2.2);
+  opacity: 0;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+.todo .checkbox input:checked + span + p {
+  color: var(--bg-b);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.todo .checkbox input:checked + span + p::after {
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.todo .checkbox p {
+  font-size: 26px;
+  font-weight: 100;
+}
+
+@-webkit-keyframes check-15 {
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes check-15 {
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}

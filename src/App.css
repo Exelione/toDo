@@ -1,0 +1,20 @@
+#app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  font-family: var(--Merriweather);
+}
+#app .container {
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 28vw;
+  color: var(--text-c);
+  min-width: 368px;
+  height: 100vh;
+  margin: 38px auto;
+  height: auto;
+}

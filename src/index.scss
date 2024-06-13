@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+:root {
+    --Merriweather: 'Merriweather', sans-serif;
+    --bg-c: #1a1612;
+    --bg-a: #251f19;
+    --text-c: #ffff;
+    --bg-b: #C99E71;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+body {
+    background-color: var(--bg-c);
+    .defBtn {
+
+        background-color: transparent;
+        border: 0.5px solid var(--text-c);
+        border-radius: 38px;
+        transition: .3s ease-in-out;
+        position: absolute;
+        align-self: center;
+        right: 2.5%;
+    
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0px 0px 38px 38px rgba(255, 255, 255, 0.02);
+            transform: scale(1.1);
+        }
+    
+        span {
+            padding: 8px;
+            color: var(--text-c);
+    
+        }
+    
+    }
+    
+}

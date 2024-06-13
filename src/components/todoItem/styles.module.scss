@@ -1,0 +1,110 @@
+.todo {
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 38px;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    word-break: break-all;
+    background-color: var(--bg-a);
+
+    .checkbox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        cursor: pointer;
+        gap: 18px;  
+
+
+        span {
+            display: inline-block;
+            transform: translate3d(0, 0, 0);
+            vertical-align: middle;
+            position: relative;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            transform: scale(1);
+            vertical-align: middle;
+            border: 1px solid#C99E71;
+            transition: all 0.2s ease;
+            &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background:transparent;
+                display: block;
+                transform: scale(0);
+                opacity: 1;
+                border-radius: 50%;
+                transition-delay: 0.2s;
+            }
+
+            svg {
+                position: absolute;
+                z-index: 1;
+                top: 14px;
+                left: 12px;
+                fill: none;
+                stroke: var(--text-c);
+                stroke-width: 2;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-dasharray: 16px;
+                stroke-dashoffset: 16px;
+                transition: all 0.3s ease;
+                transition-delay: 0.1s;
+                transform: translate3d(0, 0, 0);
+               
+            }
+        }
+        input {
+            display: none;
+
+            &:checked+span {
+                border-color: var(--bg-b);
+                background: var(--bg-b);
+                animation: check-15 0.6s ease;
+
+                svg {
+                    stroke-dashoffset: 0;
+                }
+
+                +p:before {
+                    transform: scale(2.2);
+                    opacity: 0;
+                    transition: all 0.6s ease;
+
+
+                }
+
+                +p {
+                    color: var(--bg-b);
+                    transition: all 0.3s ease;
+                }
+
+                +p::after {
+                    transform: scaleX(1);
+                    transition: all 0.3s ease;
+                }
+            }
+            
+        }
+        p{
+            font-size: 26px;
+            font-weight: 100;
+            
+        }
+    }
+  
+
+}
+
+@keyframes check-15 {
+    50% {
+      transform: scale(1.2);
+    }
+}
