@@ -14,6 +14,8 @@
   position: relative;
   word-break: break-all;
   background-color: var(--bg-a);
+  -webkit-transition: 0.83s ease-in-out;
+  transition: 0.83s ease-in-out;
 }
 .todo.compleated, .compleated.compleated {
   background-color: var(--bg-d);

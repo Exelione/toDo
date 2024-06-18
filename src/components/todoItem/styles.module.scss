@@ -9,6 +9,7 @@
     position: relative;
     word-break: break-all;
     background-color: var(--bg-a);
+    transition: .83s ease-in-out;
     &.compleated{
         background-color:var(--bg-d);
         
