@@ -1,4 +1,4 @@
-.todo {
+.todo, .compleated {
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 38px;
@@ -9,17 +9,22 @@
     position: relative;
     word-break: break-all;
     background-color: var(--bg-a);
-
+    &.compleated{
+        background-color:var(--bg-d);
+        
+    }
+    
+    
     .checkbox {
         display: flex;
         align-items: center;
-        justify-content: center;
         user-select: none;
         cursor: pointer;
         gap: 18px;  
-
-
+        width: 85%;
+        
         span {
+            flex-shrink: 0;
             display: inline-block;
             transform: translate3d(0, 0, 0);
             vertical-align: middle;
@@ -28,7 +33,6 @@
             height: 38px;
             border-radius: 50%;
             transform: scale(1);
-            vertical-align: middle;
             border: 1px solid#C99E71;
             transition: all 0.2s ease;
             &::before {
@@ -63,7 +67,7 @@
         }
         input {
             display: none;
-
+           
             &:checked+span {
                 border-color: var(--bg-b);
                 background: var(--bg-b);
@@ -91,16 +95,18 @@
                     transition: all 0.3s ease;
                 }
             }
-            
+           
         }
         p{
             font-size: 26px;
             font-weight: 100;
             
+            
+            
         }
     }
   
-
+   
 }
 
 @keyframes check-15 {
