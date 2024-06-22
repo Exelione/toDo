@@ -7,9 +7,8 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    word-break: break-all;
-    background-color: var(--bg-a);
-    transition: .83s ease-in-out;
+    background-color: var(--bg-c);
+    transition: .63s ease-in-out;
     &.compleated{
         background-color:var(--bg-d);
         
@@ -34,7 +33,7 @@
             height: 38px;
             border-radius: 50%;
             transform: scale(1);
-            border: 1px solid#C99E71;
+            border: 1px solid var(--text-c);
             transition: all 0.2s ease;
             &::before {
                 content: "";
@@ -54,7 +53,7 @@
                 top: 14px;
                 left: 12px;
                 fill: none;
-                stroke: var(--text-c);
+                stroke: var(--bg-d);
                 stroke-width: 2;
                 stroke-linecap: round;
                 stroke-linejoin: round;
@@ -100,7 +99,7 @@
         }
         p{
             font-size: 26px;
-            font-weight: 100;
+            
             
             
             
