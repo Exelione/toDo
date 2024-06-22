@@ -11,7 +11,11 @@
     transition: .63s ease-in-out;
     &.compleated{
         background-color:var(--bg-d);
-        
+        .checkboxDate{
+           
+            color: var(--bg-b);
+            
+        }
     }
     
     
@@ -99,9 +103,16 @@
         }
         p{
             font-size: 26px;
-            
-            
-            
+        }
+        .checkboxDate{
+            z-index: 1;
+            background: transparent;
+            position: absolute;
+            left: 15%;
+            bottom: -25%;
+            width: auto;
+            background-color: inherit;
+            font-size: 12px;
             
         }
     }
