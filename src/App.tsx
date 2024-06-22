@@ -14,7 +14,7 @@ function App() {
 
   const addTodo = () => {
     const todo : Todo = {
-      id: new Date().toISOString(),
+      id: new Date().toLocaleString(),
       text,
       compleated: false
     }
