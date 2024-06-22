@@ -1,7 +1,7 @@
 export interface Todo {
   id: string,
   text: string,
-  compleated: boolean
+  compleated?: boolean
 }
 export interface TodosProps {
   todos?: Todo[],

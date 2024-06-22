@@ -124,13 +124,9 @@
   font-size: 26px;
 }
 .todo .checkbox .checkboxDate, .compleated .checkbox .checkboxDate {
-  z-index: 1;
-  background: transparent;
   position: absolute;
   left: 15%;
   bottom: -25%;
-  width: auto;
-  background-color: inherit;
   font-size: 12px;
 }
 
