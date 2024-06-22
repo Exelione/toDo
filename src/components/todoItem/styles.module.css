@@ -19,6 +19,9 @@
 .todo.compleated, .compleated.compleated {
   background-color: var(--bg-d);
 }
+.todo.compleated .checkboxDate, .compleated.compleated .checkboxDate {
+  color: var(--bg-b);
+}
 .todo .checkbox, .compleated .checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -119,6 +122,16 @@
 }
 .todo .checkbox p, .compleated .checkbox p {
   font-size: 26px;
+}
+.todo .checkbox .checkboxDate, .compleated .checkbox .checkboxDate {
+  z-index: 1;
+  background: transparent;
+  position: absolute;
+  left: 15%;
+  bottom: -25%;
+  width: auto;
+  background-color: inherit;
+  font-size: 12px;
 }
 
 @-webkit-keyframes check-15 {
