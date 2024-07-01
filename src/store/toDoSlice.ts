@@ -10,6 +10,7 @@ const todoSlice = createSlice({
     initialState,
     reducers: {
         addTodo(state, action : PayloadAction<string>) {
+            if (action.payload.trim().length)
             state.list.push({
                 id: new Date().toLocaleString(),
                 title: action.payload,
