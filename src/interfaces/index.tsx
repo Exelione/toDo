@@ -1,29 +1,18 @@
 export interface Todo {
   id: string,
-  text: string,
-  compleated?: boolean
+  title: string,
+  compleated: boolean,
 }
-export interface TodosProps {
-  todos?: Todo[],
-  delTodo: (_: string) => void,
-  toggleTodo: (id: string) => void,
-  id?: string,
-
-
+export interface TodosState{
+  list: Todo[]
 }
-
-export interface TodoItemProps {
-  compleated?: boolean,
-  todo?: Todo,
-  text: string,
+export interface TodoItemProps{
+  title: string,
   id: string,
-  delTodo: (id: string) => void,
-  toggleTodo: (id: string) => void,
-
+  compleated: boolean,
 }
-export interface TodoLabelProps {
-  todos?: Todo[],
-  handleInput: (_: string) => void,
-  handleSubmit: () => void,
+export interface TodoLabelProps{
+  handleInput: (_:string)=> void,
+  handleSubmit: ()=>void,
   text: string
 }

@@ -121,6 +121,7 @@
   transition: all 0.3s ease;
 }
 .todo .checkbox p, .compleated .checkbox p {
+  overflow-wrap: anywhere;
   font-size: 26px;
 }
 .todo .checkbox .checkboxDate, .compleated .checkbox .checkboxDate {
