@@ -1,10 +1,7 @@
+import { TodoLabelProps } from '../../interfaces';
 import styles from './styles.module.css';
 
-export interface TodoLabelProps{
-  handleInput: (_:string)=> void,
-  handleSubmit: ()=>void,
-  text: string
-}
+
 export const TodoLabel = ({handleInput, handleSubmit,text} :TodoLabelProps)  => {
   return (
 

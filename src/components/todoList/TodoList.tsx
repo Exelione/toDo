@@ -1,17 +1,16 @@
 
-import { TodosProps } from '../../interfaces';
 import TodoItem from '../todoItem/TodoItem';
 import styles from './styles.module.css';
+import { useAppSelector } from '../../hook';
 
-export const TodoList = ({ todos, toggleTodo, delTodo } : TodosProps) => {
+export const TodoList = () => {
+  const todos = useAppSelector(state => state.todoList.list);
   return (
 
     <ul className={styles.todoList} translate='no'>
-      {todos?.map((todo) => (
+      {todos.map((todo) => (
         <TodoItem
           key={todo.id}
-          toggleTodo={toggleTodo}
-          delTodo={delTodo}
           {...todo}
         />))}
     </ul>

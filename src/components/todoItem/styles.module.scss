@@ -92,6 +92,7 @@
                 +p {
                     color: var(--bg-b);
                     transition: all 0.3s ease;
+                    
                 }
 
                 +p::after {
@@ -102,6 +103,7 @@
            
         }
         p{
+            overflow-wrap: anywhere;
             font-size: 26px;
         }
         .checkboxDate{
